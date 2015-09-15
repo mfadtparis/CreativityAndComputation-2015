@@ -1,10 +1,15 @@
 size(500,300);
 background(239,240,17);
 
+color[] colarray = new color[2];
+colarray[0] = color(0);
+colarray[1] = color(255);
+
 for(int x=0; x <width/5; x++){
   for(int y=0; y <height/3; y++){
     noStroke();
-    fill(random(252),0,0);
+    color col = colarray[(int)random(0,2)];
+    fill(col);
     rect(20 + x * 40, 10 + y * 55, random(118,75),random(88,220 )); 
   }
 }
@@ -16,9 +21,6 @@ for(int x=0; x <width/5; x++){
     rect(20 + x * 40, 10 + y * 55, random(4,8),random(8,20 )); 
   }
 }
-
-
-
 
 rect(250,150,500,300);
 fill(252,5,5);
