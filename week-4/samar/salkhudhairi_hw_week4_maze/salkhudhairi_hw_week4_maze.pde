@@ -69,9 +69,13 @@ void keyPressed(){
     x-=10;
     ellipse(x,y,10,10);
   }
+  if (key == 's') { 
+    save ("maze" + millis() + ".jpg");
+    ellipse(x,y,10,10);
+   }
 }
 
-void keyRelased () {
-  if (key == 's') { 
-  save ("maze" + millis () + ".jpg");}
- }
+//void keyReleased() {
+//  if (key == 's') { 
+//  save ("maze" + millis() + ".jpg");}
+// }
